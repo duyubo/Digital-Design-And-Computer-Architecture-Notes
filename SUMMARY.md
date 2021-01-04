@@ -9,5 +9,4 @@
 ## Architecture
 
 * [Digital Building Blocks](architecture/digital-building-blocks.md)
-* [Untitled](architecture/untitled.md)
 
