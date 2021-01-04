@@ -12,5 +12,4 @@
 ## Digital System Basic
 
 * [Combinational Logic Design](digital-system-basic/combinational-logic-design.md)
-* [Untitled](digital-system-basic/untitled.md)
 
