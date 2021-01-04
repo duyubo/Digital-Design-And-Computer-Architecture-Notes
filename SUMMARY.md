@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Sequential Logic Design](sequential-logic-design.md)
 * [Memory System](memory-system.md)
 * [Logic System](logic-system.md)
 
@@ -11,5 +10,6 @@
 
 ## Digital System Basic
 
+* [Sequential Logic Design](digital-system-basic/sequential-logic-design.md)
 * [Combinational Logic Design](digital-system-basic/combinational-logic-design.md)
 
