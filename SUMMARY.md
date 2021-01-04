@@ -8,6 +8,6 @@
 
 ## Architecture
 
-* [Untitled](architecture/untitled/README.md)
-  * [Digital Building Blocks](architecture/untitled/digital-building-blocks.md)
+* [Digital Building Blocks](architecture/digital-building-blocks.md)
+* [Untitled](architecture/untitled.md)
 
