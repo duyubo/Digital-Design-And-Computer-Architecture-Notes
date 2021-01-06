@@ -5,7 +5,10 @@
 This part reviews some elaborate combinational and sequential buillding blocks used in digital systems such as arithmetic circuits, counters, shift registers, memory arrays and logic arrays. 
 
 ## Arithmetic Circuits
-fgg
+
+## <span id=a> ddda </span>
+y[ddda](#a)
+
 
 ## Counters 
 ## Shift Registers
