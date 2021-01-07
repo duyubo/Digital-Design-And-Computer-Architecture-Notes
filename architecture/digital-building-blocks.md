@@ -48,8 +48,6 @@ Here is an example of 32-bit carry look ahead adder, in \(a\) the adder is divid
 
 ![One block of Carry Look-ahead Adder](../.gitbook/assets/carrylookaheadadder.png)
 
-
-
 * Delay time:$$t_{CLA} = t_{pg} + t_{pg\_block} + (\frac{N}{k}-1)t_{AND\_OR} + kt_{FA}$$. Where $$t_{pg}$$ is the delay of the individual gates to generate $$G_i$$ and $$P_i$$, $$t_{pg\_block}$$ is the delay to find the $$P_{i:j}$$ and $$G_{i:j}$$ for a k-bit block, and $$t_{AND\_OR}$$ is the delay from $$C_{in}$$ to $$C_{out}$$ through the final AND/OR logic of the k-bit CLA block. Finally, the critical path through the last block contains a short ripple-carry adder $$t_{FA}$$. The computation of $$G_i$$ and $$P_i$$ is to propagate the $$C_{out}$$ quickly to the next block, we still need the ripple-carry adder to calculate the output $$S$$.  
 * Advantage: For N &gt; 16 it is much faster.
 * Disadvantage: Still increases linearly but more expensive.
@@ -90,13 +88,13 @@ The subtraction module is designed based on the addition module: $$Y = A-B$$  an
 
 #### Shifter
 
-Shifter shifts a binary number left or right by a specified number of position, which can also be taken as multiply or divide by power of 2.
+Shifter shifts a binary number left or right by a specified number of position, which can also be taken as multiply or divide by power of 2. An N-bit shifter can be built from N:1 multiplexers.
 
-![](../.gitbook/assets/shifter.png)
-
-
+![Shifter: \(a\) shift left, \(b\) logic shift right, \(c\) arithmetic sift right](../.gitbook/assets/shifter.png)
 
 #### Rotators
+
+Replaces the ground or high voltage 
 
 ### ALU
 
