@@ -44,12 +44,13 @@ $$G_i$$: generated signal from column i. $$G_i = A_iB_i$$. $$P_i$$: if column i 
 
 $$C_i = A_iB_i + (A_i + B_i)C_{i-1} = G_i + P_iC_{i-1}\\G_{3:0} = G_3 + P_3(G_2 + P_2 (G_1 + P_1G_0))\\P_{3:0} = P_3P_2P_1P_0\\C_i=G_{i:j} + P_{i:j}C_j$$
 
-* Delay time:$$t_{CLA} = t_{pg} + t_{pg\_block} + (\frac{N}{k}-1)t_{AND\_OR} + kt_{FA}$$. Where $$t_{pg}$$ is the delay of the individual gates to generate $$G_i$$ and $$P_i$$, $$t_{pg\_block}$$ is the delay to find the $$P_{i:j}$$ and $$G_{i:j}$$ for a k-bit block, and $$t_{AND\_OR}$$ is the delay from $$C_{in}$$ to $$C_{out}$$ through the final AND/OR logic of the k-bit CLA block. Finally, the critical path through the last block contains a short ripple-carry adder $$t_{FA}$$. The computation of $$G_i$$ and $$P_i$$ is to propagate the $$C_{out}$$ quickly to the next block, we still need the ripple-carry adder to calculate the output $$S$$.  
-
 Here is an example of 32-bit carry look ahead adder, in \(a\) the adder is divided into 8 4-bit CLA block, in \(b\) is the diagram of each block: 
 
-![One block of carry look-ahead adder](../.gitbook/assets/carrylookaheadadder.png)
+![One block of Carry Look-ahead Adder](../.gitbook/assets/carrylookaheadadder.png)
 
+
+
+* Delay time:$$t_{CLA} = t_{pg} + t_{pg\_block} + (\frac{N}{k}-1)t_{AND\_OR} + kt_{FA}$$. Where $$t_{pg}$$ is the delay of the individual gates to generate $$G_i$$ and $$P_i$$, $$t_{pg\_block}$$ is the delay to find the $$P_{i:j}$$ and $$G_{i:j}$$ for a k-bit block, and $$t_{AND\_OR}$$ is the delay from $$C_{in}$$ to $$C_{out}$$ through the final AND/OR logic of the k-bit CLA block. Finally, the critical path through the last block contains a short ripple-carry adder $$t_{FA}$$. The computation of $$G_i$$ and $$P_i$$ is to propagate the $$C_{out}$$ quickly to the next block, we still need the ripple-carry adder to calculate the output $$S$$.  
 * Advantage: For N &gt; 16 it is much faster.
 * Disadvantage: Still increases linearly but more expensive.
 
@@ -70,6 +71,10 @@ Here is the schematic of the prefix adder:
 * Disadvantage: expensive.
 
 #### Subtraction
+
+The subtraction module is designed based on the addition module: $$Y = A-B$$  and $$-B = \bar B + 1$$ , $$Y = A + \bar B + 1$$ .  So, we can perform it with a single CPA by adding $$A + \bar B$$ , with $$C_{in} = 1$$ .
+
+![Subtraction Module: \(a\) symbol, \(b\) implementation](../.gitbook/assets/subtraction.png)
 
 ### Comparator
 
