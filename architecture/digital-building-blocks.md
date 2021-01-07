@@ -103,21 +103,35 @@ The progress of the N-bit binary multiplication module: $$A \times B$$  can be t
 
 ### Divider
 
-The divider 
+The divider sets the remaining most significant bit $$A_i$$ as the least significant bit and shift R left 1 bit. 
 
 $$R' = 0; \\ for \  i \in [N-1:1]\\ \quad R = {R'<<1,A_i} \\ \quad D = R - B;\\ \quad if \ D>=0:\\Q_i = 1; \ R' = D\\  \quad else: \, Q_i = 0;\ R' = R$$ 
 
 ![4-bit Divider](../.gitbook/assets/divider.png)
 
-
-
 ## Counters
+
+An N-bit counter composed of an adder and a resettable register. On each cycle, the counter adds 1 to the value stored in the register. And assign it as the next stored value of the register.   
+
+![N-bit Counter](../.gitbook/assets/counter%20%281%29.png)
+
+![Counter Symbol ](../.gitbook/assets/countersymbol%20%281%29.png)
 
 ## Shift Registers
 
+
+
+## Scan Chains
+
+
+
 ## Memory Arrays and Logic Arrays
 
+
+
 ## Number System
+
+
 
 
 
