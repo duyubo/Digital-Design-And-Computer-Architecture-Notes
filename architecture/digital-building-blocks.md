@@ -44,6 +44,24 @@ Here is an example of 32-bit carry look ahead adder, in (a) the adder is divided
 * Advantage: For N > 16 it is much faster.
 * Disvantage: Still increases linearly but more expensive.
 
+##### Prefix Adder
+Prefix adders extend the generate and propagate logic of the carry look ahead adder to perform addition ($$C_i$$ for each column) even faster. They first compute G and P for pairs of columns, then for blocks of 4, then for blocks of 8, then 16, and so forth until the generate signal for every column is known.
+
+$$S_i = (A_i \oplus B_i) \oplus C_{i-1}$$ and $$C_{i-1} = G_{i-1:-1}$$, so we can rewrite it as $$S_i = (A_i \oplus B_i) \oplus G_{i-1:-1}$$.
+
+The update equation: $$G_{i:j} = G_{i:k} + P_{i:k}G_{k-1:j}\\P_{i:j} = P_{i:k}P_{k-1:j}$$
+
+Here is the schematic of the prefix adder:
+
+![Prefix Adder](url1/PrefixAdder.png) 
+
+* Delay time: $$t_{PA} = t_{pg} + log_2N(t_{pg\_prefix}) + t_{XOR}$$, where $$t_{pg\_prefix}$$ is the delay of a black prefix cell. 
+
+* Advantage: very fast.
+* Disadvantage: expensive.
+
+#### Substraction
+
 ### <span id = com> Comparator </span>
 ###  <span id = shre> Shifter and Rotators </span>
 ### <span id = alu> ALU </span>
