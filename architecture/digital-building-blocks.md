@@ -4,7 +4,6 @@
   * [Adders and Subtractions](digital-building-blocks.md#as)
   * [Comparator](digital-building-blocks.md#com)
   * [Shifter and Rotators](digital-building-blocks.md#shre)
-  * [ALU](digital-building-blocks.md#alu)
   * [Multiplication](digital-building-blocks.md#mul)
   * [Division](digital-building-blocks.md#di)
 * [Counters](digital-building-blocks.md#co)
@@ -94,11 +93,13 @@ Shifter shifts a binary number left or right by a specified number of position, 
 
 #### Rotators
 
-Replaces the ground or high voltage 
-
-### ALU
+Replaces the ground or high voltage by $$A_i$$ in the shifter, then we can get a rotator.
 
 ### Multiplication
+
+The progress of the N-bit binary multiplication module: $$A \times B$$  can be taken as multiplying a N-bit number A with each bit in B: $$R_i = A \times B_i$$ and add them with a left shift value $$i$$ : $$\sum {(R_i *2)}$$ .
+
+![4-bit Multiplication ](../.gitbook/assets/multiplication.png)
 
 ### Division
 
