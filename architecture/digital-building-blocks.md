@@ -131,11 +131,16 @@ A shift register can be modified to perform both  **serial-to-parallel** and **p
 
 ## Scan Chains
 
-Scan Chain is a variant of shift register, which can be used to test sequential circuits. To solve this problem, designers like to be able to directly observe and control all the state of the machine. A test mode is added to read out or load the contents of all flip-flops with desirable values.
+Scan Chain is a variant of shift register, which can be used to test sequential circuits. A test mode is added to read out or load the contents of all flip-flops with desirable values. In **normal** operation, the flip-flops load data from their D input and ignore the scan chain. In **test** mode, the flip-flops serially shift their contents out and shift in new contents using $$S_{in}$$ and $$S_{out}$$ .
 
 ![Scan Chains: \(a\) schematic, \(b\) symbol, \(c\) N-bit scannable register](../.gitbook/assets/scanchains.png)
 
 ## Memory Arrays and Logic Arrays
+
+|  | RAM | ROM |
+| :--- | :--- | :--- |
+|  |  |  |
+|  |  |  |
 
 
 
