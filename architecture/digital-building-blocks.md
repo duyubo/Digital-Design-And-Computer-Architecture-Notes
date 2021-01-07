@@ -119,11 +119,21 @@ An N-bit counter composed of an adder and a resettable register. On each cycle, 
 
 ## Shift Registers
 
+A shift register has a clock, a serial input $$S_{in}$$ , a serial output $$S_{out}$$ , and N parallel outputs $$Q_{N-1:0} $$ . The serially provided input is shifted in on each clock rising edge and the others are shifted forward. After N cycles, the past N inputs are available in parallel at Q. It can be taken as **serial to parallel**.
 
+![Serial to Parallel Shift Register: with only serial input](../.gitbook/assets/srserial.png)
+
+A shift register can be modified to perform both  **serial-to-parallel** and **parallel-to-serial** operations by adding a parallel input $$D_{N-1:0}$$, and a control signal Load:
+
+![Shift Register: with both serial and parallel input](../.gitbook/assets/srboth.png)
+
+![Shift Register Symbol](../.gitbook/assets/shiftregistersymbol.png)
 
 ## Scan Chains
 
+Scan Chain is a variant of shift register, which can be used to test sequential circuits. To solve this problem, designers like to be able to directly observe and control all the state of the machine. A test mode is added to read out or load the contents of all flip-flops with desirable values.
 
+![Scan Chains: \(a\) schematic, \(b\) symbol, \(c\) N-bit scannable register](../.gitbook/assets/scanchains.png)
 
 ## Memory Arrays and Logic Arrays
 
