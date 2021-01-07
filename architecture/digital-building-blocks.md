@@ -4,8 +4,8 @@
   * [Adders and Subtractions](digital-building-blocks.md#as)
   * [Comparator](digital-building-blocks.md#com)
   * [Shifter and Rotators](digital-building-blocks.md#shre)
-  * [Multiplication](digital-building-blocks.md#mul)
-  * [Division](digital-building-blocks.md#di)
+  * [Multiplicator](digital-building-blocks.md#mul)
+  * [Divider](digital-building-blocks.md#di)
 * [Counters](digital-building-blocks.md#co)
 * [Shift Registers](digital-building-blocks.md#sr)
 * [Memory Arrays and Logic Arrays](digital-building-blocks.md#mala)
@@ -95,13 +95,21 @@ Shifter shifts a binary number left or right by a specified number of position, 
 
 Replaces the ground or high voltage by $$A_i$$ in the shifter, then we can get a rotator.
 
-### Multiplication
+### Multiplicator
 
 The progress of the N-bit binary multiplication module: $$A \times B$$  can be taken as multiplying a N-bit number A with each bit in B: $$R_i = A \times B_i$$ and add them with a left shift value $$i$$ : $$\sum {(R_i *2)}$$ .
 
 ![4-bit Multiplication ](../.gitbook/assets/multiplication.png)
 
-### Division
+### Divider
+
+The divider 
+
+$$R' = 0; \\ for \  i \in [N-1:1]\\ \quad R = {R'<<1,A_i} \\ \quad D = R - B;\\ \quad if \ D>=0:\\Q_i = 1; \ R' = D\\  \quad else: \, Q_i = 0;\ R' = R$$ 
+
+![4-bit Divider](../.gitbook/assets/divider.png)
+
+
 
 ## Counters
 
@@ -110,6 +118,10 @@ The progress of the N-bit binary multiplication module: $$A \times B$$  can be t
 ## Memory Arrays and Logic Arrays
 
 ## Number System
+
+
+
+
 
 References:
 
