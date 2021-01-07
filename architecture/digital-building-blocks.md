@@ -1,7 +1,7 @@
 # Digital Building Blocks
 
 * [Arithmetic Circuits](digital-building-blocks.md#ac)
-  * [Adders and Substractions](digital-building-blocks.md#as)
+  * [Adders and Subtractions](digital-building-blocks.md#as)
   * [Comparator](digital-building-blocks.md#com)
   * [Shifter and Rotators](digital-building-blocks.md#shre)
   * [ALU](digital-building-blocks.md#alu)
@@ -12,15 +12,19 @@
 * [Memory Arrays and Logic Arrays](digital-building-blocks.md#mala)
 * [Number System](digital-building-blocks.md#ns)
 
-This part reviews some elaborate combinational and sequential buillding blocks used in digital systems such as arithmetic circuits, counters, shift registers, memory arrays and logic arrays.
+This part reviews some elaborate combinational and sequential building blocks used in digital systems such as arithmetic circuits, counters, shift registers, memory arrays and logic arrays.
 
 ## Arithmetic Circuits
 
-### Adders and Substractions
+### Adders and Subtractions
 
 #### Adders: Carry Propagate Adder \(CPA\)
 
-The bascis element for the adder is called full adder, where $$A + B + C_{in} = C_{out}S$$: ![Full Adder](https://github.com/duyubo/Digital-Design-And-Computer-Architecture-Notes/tree/6ffd7bfb303aae45977467f24e51e61d048fab28/architecture/url1/FullAdder.png) $$S = A \oplus B \oplus C_{in}$$ and $$C_{out} = AB + AC_{in}+BC_{in}$$
+The basics element for the adder is called full adder, where $$A + B + C_{in} = C_{out}S$$:
+
+![Full Adder](../.gitbook/assets/fulladder.png)
+
+ $$S = A \oplus B \oplus C_{in}$$ and $$C_{out} = AB + AC_{in}+BC_{in}$$
 
 **Ripple Carry Adder**
 
@@ -30,13 +34,13 @@ The addition is executed sequentially from input side to the output side and all
 
 * Delay time: $$t_{tripple} = Nt_{FA}$$, where $$t_{FA}$$ is the delay of a full adder.
 * Advantage: Simple and cheap.
-* Disadvantage: Too slow espically when the size is large.
+* Disadvantage: Too slow especially when the size is large.
 
 **Carry Look-Ahead Adder**
 
-Carry look-ahead adder tries to reduce the propagation time by dividing into blocks which can quickly determine the carry out of a block as soon as the carry in is known. For each block, it uses **generator** which means whether the column generates the bit 1 without the carry in and **propagator** means wether it propagates the carry in bit.
+Carry look-ahead adder tries to reduce the propagation time by dividing into blocks which can quickly determine the carry out of a block as soon as the carry in is known. For each block, it uses **generator** which means whether the column generates the bit 1 without the carry in and **propagator** means whether it propagates the carry in bit.
 
-$$G_i$$: generated signal from column i. $$G_i = A_iB_i$$. $$P_i$$: if column i propogates the signal. $$P_i = A_i + B_i$$.
+$$G_i$$: generated signal from column i. $$G_i = A_iB_i$$. $$P_i$$: if column i propagates the signal. $$P_i = A_i + B_i$$.
 
 $$C_i = A_iB_i + (A_i + B_i)C_{i-1} = G_i + P_iC_{i-1}\\G_{3:0} = G_3 + P_3(G_2 + P_2 (G_1 + P_1G_0))\\P_{3:0} = P_3P_2P_1P_0\\C_i=G_{i:j} + P_{i:j}C_j$$
 
@@ -47,7 +51,7 @@ Here is an example of 32-bit carry look ahead adder, in \(a\) the adder is divid
 ![One block of carry look-ahead adder](../.gitbook/assets/carrylookaheadadder.png)
 
 * Advantage: For N &gt; 16 it is much faster.
-* Disvantage: Still increases linearly but more expensive.
+* Disadvantage: Still increases linearly but more expensive.
 
 **Prefix Adder**
 
@@ -65,7 +69,7 @@ Here is the schematic of the prefix adder:
 * Advantage: very fast.
 * Disadvantage: expensive.
 
-#### Substraction
+#### Subtraction
 
 ### Comparator
 
