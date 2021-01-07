@@ -20,7 +20,7 @@ This part reviews some elaborate combinational and sequential buillding blocks u
 #### Adders: Carry Propagate Adder (CPA)
 The bascis element for the adder is called full adder, where $$A + B + C_{in} = C_{out}S$$:
 ![Full Adder](url1/FullAdder.png) 
-$$S = A \oplus B \oplus C_{in}$$ and $$C_{out} = AB + AC_{in}+BC_{in}$$
+$ S = A \oplus B \oplus C_{in} $ and $ C_{out} = AB + AC_{in}+BC_{in} $
 ##### Ripple Carry Adder
 ![Ripple Carry Adder](url1/RippleCarryAdder.png) 
 The addition is executed sequentially from input side to the output side and all the adders wait for the $C_{out}$ from their precedent as the $C_{in}$ of its input.
