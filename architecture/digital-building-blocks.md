@@ -24,7 +24,7 @@ The basics element for the adder is called full adder, where $$A + B + C_{in} = 
 
 ![Full Adder](../.gitbook/assets/fulladder.png)
 
- $$S = A \oplus B \oplus C_{in}$$ and $$C_{out} = AB + AC_{in}+BC_{in}$$
+ $$S = A \oplus B \oplus C_{in}$$ and $$C_{out} = AB + AC_{in}+BC_{in}$$\*\*\*\*
 
 **Ripple Carry Adder**
 
@@ -78,7 +78,25 @@ The subtraction module is designed based on the addition module: $$Y = A-B$$  an
 
 ### Comparator
 
+* Equality Comparator:
+
+![Equality Comparator: \(a\) symbol, \(b\) the implementation](../.gitbook/assets/comparatore.png)
+
+* Magnitude Comparator: calculate A-B and check the sign bit, if the result is negative the sign bit is 1.
+
+![Magnitude Comparator](../.gitbook/assets/comparatorm.png)
+
 ### Shifter and Rotators
+
+#### Shifter
+
+Shifter shifts a binary number left or right by a specified number of position, which can also be taken as multiply or divide by power of 2.
+
+![](../.gitbook/assets/shifter.png)
+
+
+
+#### Rotators
 
 ### ALU
 
@@ -93,4 +111,10 @@ The subtraction module is designed based on the addition module: $$Y = A-B$$  an
 ## Memory Arrays and Logic Arrays
 
 ## Number System
+
+References:
+
+1. &lt;&lt;Digital Design & Computer Architecture&gt;&gt;
+2. 
+
 
