@@ -155,6 +155,8 @@ During a memory read, a wordline is asserted, and the corresponding row of bit c
 | Transistors Per Cell | 1 | 6 | ------ | 20 |
 | Latency  | Slow | Medium | ------ | fast |
 
+## 
+
 ## Number System
 
 #### Int
