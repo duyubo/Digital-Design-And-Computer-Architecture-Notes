@@ -162,9 +162,15 @@ During a memory read, a wordline is asserted, and the corresponding row of bit c
 
 ![3 &#xD7; 3 &#xD7; 2-bit PLA using two-level logic](../.gitbook/assets/pla.png)
 
-An M × N× P-bit PLA has M inputs, N implicants, and P outputs. ROMs can be viewed as a special case of PLAs. A 2M-word × N-bit ROM is simply an M×  $$2^M$$ × N-bit PLA
+An M × N× P-bit PLA has M inputs, N implicants, and P outputs. ROMs can be viewed as a special case of PLAs. A $$2^M$$-word × N-bit ROM is simply an $$M \times 2^M \times N$$ -bit PLA.
 
-* **field programmable gate array \(FPGA\):**
+* **field programmable gate array \(FPGA\):** Using software programming tools, a user can implement designs on the FPGA using either an HDL or a schematic. They are built as an array of configurable logic elements \(LEs\), also referred to as configurable logic blocks \(CLBs\). Each LE can be configured to perform combinational or sequential functions.
+
+|  | PLA | FPGA |
+| :--- | :--- | :--- |
+| combinational logic | yes | yes |
+| sequential logic | no | yes |
+| multilevel logic | no | yes |
 
 ## Number System
 
