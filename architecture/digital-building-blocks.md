@@ -8,7 +8,8 @@
   * [Divider](digital-building-blocks.md#di)
 * [Counters](digital-building-blocks.md#co)
 * [Shift Registers](digital-building-blocks.md#sr)
-* [Memory Arrays and Logic Arrays](digital-building-blocks.md#mala)
+* [Memory Arrays](digital-building-blocks.md#mala)
+* Logic Arrays
 * [Number System](digital-building-blocks.md#ns)
 
 This part reviews some elaborate combinational and sequential building blocks used in digital systems such as arithmetic circuits, counters, shift registers, memory arrays and logic arrays.
@@ -135,7 +136,7 @@ Scan Chain is a variant of shift register, which can be used to test sequential 
 
 ![Scan Chains: \(a\) schematic, \(b\) symbol, \(c\) N-bit scannable register](../.gitbook/assets/scanchains.png)
 
-## Memory Arrays and Logic Arrays
+## Memory Arrays
 
 The memory is organized as a two-dimensional array of memory cells. An 2N array with N-bit addresses and M-bit data has rows and M columns. Each row of data is called a word. Thus, the array contains 2N M-bit words. The depth of an array is the number of rows, and the width is the number of columns, also called the word size.
 
@@ -155,7 +156,15 @@ During a memory read, a wordline is asserted, and the corresponding row of bit c
 | Transistors Per Cell | 1 | 6 | ------ | 20 |
 | Latency  | Slow | Medium | ------ | fast |
 
-## 
+## Logic Arrays
+
+* **Programmable Logic Array \(PLA\)**:  PLAs are built from an AND array followed by an OR array  as following:
+
+![3 &#xD7; 3 &#xD7; 2-bit PLA using two-level logic](../.gitbook/assets/pla.png)
+
+An M × N× P-bit PLA has M inputs, N implicants, and P outputs. ROMs can be viewed as a special case of PLAs. A 2M-word × N-bit ROM is simply an M×  $$2^M$$ × N-bit PLA
+
+* **field programmable gate array \(FPGA\):**
 
 ## Number System
 
