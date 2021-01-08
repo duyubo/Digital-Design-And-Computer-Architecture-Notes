@@ -137,12 +137,23 @@ Scan Chain is a variant of shift register, which can be used to test sequential 
 
 ## Memory Arrays and Logic Arrays
 
-|  | RAM | ROM |
-| :--- | :--- | :--- |
-|  |  |  |
-|  |  |  |
+The memory is organized as a two-dimensional array of memory cells. An 2N array with N-bit addresses and M-bit data has rows and M columns. Each row of data is called a word. Thus, the array contains 2N M-bit words. The depth of an array is the number of rows, and the width is the number of columns, also called the word size.
+
+Memory arrays are built as an array of bit cells, each of which stores 1 bit of data: ![](../.gitbook/assets/bitcell.png) 
+
+During a memory read, a wordline is asserted, and the corresponding row of bit cells drives the bitlines HIGH or LOW.
 
 
+
+![Organization of the memory ](../.gitbook/assets/organizationmemory.png)
+
+|  | DRAM | SRAM | ROM | Flip-Flops |
+| :--- | :--- | :--- | :--- | :--- |
+| Volatile | yes | yes | no | yes |
+| Store Method | charge on a capacitor, | a pair of cross-coupled inverters | the presence or absence of a transistor | ------ |
+| Need Refresh | yes | yes | no | yes |
+| Transistors Per Cell | 1 | 6 | ------ | 20 |
+| Latency  | Slow | Medium | ------ | fast |
 
 ## Number System
 
