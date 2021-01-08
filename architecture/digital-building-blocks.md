@@ -146,7 +146,9 @@ Scan Chain is a variant of shift register, which can be used to test sequential 
 
 ## Number System
 
+#### Int
 
+#### Double
 
 
 
